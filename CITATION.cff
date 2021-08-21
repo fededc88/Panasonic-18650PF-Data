@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If this data is utilized for any purpose, it should be appropriately
+referenced"
+authors:
+  - family-names: "Kollmeyer"
+    given-names: "Phillip"
+    orcid: "https://orcid.org/0000-0003-3576-672X"
+title: “Panasonic 18650PF Li-ion Battery Data"
+version: 1
+doi: 10.17632/wykht8y7tg.10jk
+date-released: 2018-06-21
