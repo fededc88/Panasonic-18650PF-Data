@@ -1,14 +1,14 @@
 # [Panasonic 18650PF Li-Ion Battery Data](https://data.mendeley.com/datasets/wykht8y7tg/1#folder-df7a873b-ae5f-4a63-ab5c-8f9792b59429)
 
-## Brief
-
 The included tests were performed at the University of Wisconsin-Madison by Dr. Phillip Kollmeyer (phillip.kollmeyer@gmail.com).  If this data is utilized for any purpose, it should be appropriately referenced.
 
-The tests can be used to test Neural Network and Kalman Filter State of Charge algorithms, or to develop battery models, and are intended to be a reference so researchers can compare their algorithm and model performance for a standard data set.
+## Brief
 
 For the tests, a brand new 2.9Ah Panasonic 18650PF cell was tested in an 8 cu.ft. thermal chamber with a 25 amp, 18 volt Digatron Firing Circuits Universal Battery Tester channel.
 
 A series of tests, including HPPC, drive cycles, and impedance spectroscopy, were performed at five different temperatures.  The battery was charged after each test at a 1C rate to 4.2V, 50mA cut off, with battery temperature 12degC or greater).
+
+The tests can be used to test Neural Network and Kalman Filter State of Charge algorithms, or to develop battery models, and are intended to be a reference so researchers can compare their algorithm and model performance for a standard data set.
 
 ## Dataset description
 
