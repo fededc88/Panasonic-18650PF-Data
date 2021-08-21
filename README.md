@@ -1,10 +1,12 @@
-# [Panasonic_18650PF_Li-Ion_Battery_Datset](https://data.mendeley.com/datasets/wykht8y7tg/1#folder-df7a873b-ae5f-4a63-ab5c-8f9792b59429)
+# [Panasonic 18650PF Li-Ion Battery Data](https://data.mendeley.com/datasets/wykht8y7tg/1#folder-df7a873b-ae5f-4a63-ab5c-8f9792b59429)
 
+## Brief
 The included tests were performed at the University of Wisconsin-Madison by Dr. Phillip Kollmeyer (phillip.kollmeyer@gmail.com).  If this data is utilized for any purpose, it should be appropriately referenced.
 
 A brand new 2.9Ah Panasonic 18650PF cell was tested in an 8 cu.ft. thermal chamber with a 25 amp, 18 volt Digatron Firing Circuits Universal Battery Tester channel.
 
-/*************************************************/
+## Dataset description
+
 A series of tests were performed at five different temperatures, as follows (battery charged after each test at 1C rate to 4.2V, 50mA cut off, with battery temperature 12degC or greater):
 
 1. Cycled at 1C rate at 25degC ten times to break it in (this data is not included)
@@ -19,20 +21,19 @@ A series of tests were performed at five different temperatures, as follows (bat
 10. Cycles 1 through 4 are repeated ("10degC Trise with pauses")with a starting ambient temperature of 10degC, similar to that described in step 8.  These cycles include regen power though, since temperature is greater than 10degC.
 11. The battery is cycled ten times at 25degC at a rate of 1C ("C20 OCV Test_end_of_tests" folder).  This is followed by two reference capacity tests performed at 1C, which show that the 1C battery capacity has fallen from 2.8Ah to 2.3Ah after the series of tests performed (approximately 110 cycles).
 
-/*************************************************/
-File naming convention:
+### File naming convention:
+
 The file names begin with the date the test started, and are followed by the time the test started and a descriptive name, such as in the following example:
 "03-18-17_02.17 25degC_Cycle_1_Pan18650PF.mat"
 
-Date: "03-18-18" (March 18th, 2018)
-Time: "02.17" (2:17am)
-Descriptor: "25degC_Cycle_1_Pan18650PF"
+* Date: "03-18-18" (March 18th, 2018)
+* Time: "02.17" (2:17am)
+* Descriptor: "25degC_Cycle_1_Pan18650PF"
 
 The naming convention allows for sorting by date and test time when all the files are placed in one folder.  This may be useful when trying to determine which charge is associated with which drive cycle, for example, or when looking at aging.
 
+### Data columns:
 
-/*************************************************/
-Data columns:
 TimeStamp (timestamp in MM/DD/YYYY HH:MM:SS AM format)
 Voltage (measured cell terminal voltage, sense leads welded directly to battery terminal)
 Current (measure current in amps)
@@ -43,12 +44,10 @@ Battery_Temp_degC (battery case temperature, at middle of battery, in degrees Ce
 Time (time in seconds, starts at zero at beginning of each data file)
 Chamber_Temp_degC (measured chamber temperature in degrees Celsius)
 
+### Time step:
 
-/*************************************************/
-Time step:
 Tests considered more important, such as drive cycles, were saved with a 0.1 second time step.  Other test portions, such as charges and pauses, were considered to have slower dynamics and be less important, and were therefore save at a lower data rate.  Be aware of these variances in data rate, and upsample the logged data if necessary to achieve a higher or consistent data rate.
 
+### Repeated data:
 
-/*************************************************/
-Repeated data:
 Due to an issue with the battery tester's logging, many of the US06, HWFET, UDDS, LA92, and NN drive cycles were saved in a single long file with the charges and pauses which occured between tests.  The data rate of these files is not consistent (lower data logging rate for charges and pauses).  These continuous files may be useful for some applications, and were therefore left.  The files were also split, such that seperate US06, HWFET, etc files are provided.  Because of this some drive cycle data is included twice - in the long contiguous file as well as in the split files.
